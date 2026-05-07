@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CatIcon from '../components/CatIcon.astro';
+import { site } from '../data/site';
+
+const channels = [
+  {
+    icon: 'mail',
+    title: 'Mail',
+    value: site.email,
+    href: `mailto:${site.email}`,
+    description: 'Voor uitgebreide vragen of een eerste introductie van jezelf.',
+  },
+  {
+    icon: 'phone',
+    title: 'Telefoon',
+    value: site.phoneDisplay,
+    href: `tel:${site.phone.replace(/\s/g, '')}`,
+    description: 'Voor wie liever even direct kennismaakt.',
+  },
+  {
+    icon: 'whatsapp',
+    title: 'WhatsApp',
+    value: site.phoneDisplay,
+    href: site.whatsappUrl,
+    description: 'Snel en laagdrempelig — perfect voor korte vragen.',
+  },
+] as const;
+---
+
+<Layout
+  title="Contact"
+  description="Neem contact op met Cattery Pecinta Kucing in Arnhem — via mail, telefoon of WhatsApp. Reageren doen we altijd persoonlijk."
+>
+  <!-- ── HEADER ─────────────────────────────────────────── -->
+  <section class="relative overflow-hidden pt-16 pb-12">
+    <div class="soft-blob bg-mint w-[400px] h-[400px] -top-20 -right-24"></div>
+    <div class="soft-blob bg-blush w-[300px] h-[300px] top-32 -left-12"></div>
+    <div class="container-soft relative max-w-3xl">
+      <span class="eyebrow">Contact</span>
+      <h1 class="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
+        Laten we <span class="italic text-rose-deep">kennismaken</span>.
+      </h1>
+      <p class="mt-6 text-lg">
+        Mail, app of bel — wat voor jou het prettigst is. We reageren altijd persoonlijk en nemen de tijd om je vragen door te nemen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── CHANNELS ───────────────────────────────────────── -->
+  <section class="pb-20">
+    <div class="container-soft grid md:grid-cols-3 gap-5">
+      {channels.map((c) => (
+        <a
+          href={c.href}
+          target={c.icon === 'whatsapp' ? '_blank' : undefined}
+          rel={c.icon === 'whatsapp' ? 'noopener' : undefined}
+          class="reveal group bg-cream-warm rounded-2xl p-7 border border-line/60 hover:border-rose/40 hover:shadow-soft transition-all flex flex-col"
+        >
+          <span class="grid place-items-center w-12 h-12 rounded-full bg-mint text-teal mb-5 group-hover:bg-blush group-hover:text-rose-deep transition-colors">
+            <CatIcon name={c.icon} />
+          </span>
+          <h2 class="font-display text-xl">{c.title}</h2>
+          <p class="mt-1 text-sm text-ink-mute">{c.description}</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-rose-deep text-sm font-medium break-all">
+            {c.value}
+            <CatIcon name="arrow" size={14} class="group-hover:translate-x-0.5 transition-transform" />
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── ADRES ──────────────────────────────────────────── -->
+  <section class="py-20 bg-cream-warm border-y border-line/40">
+    <div class="container-soft grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-5 reveal">
+        <span class="eyebrow eyebrow-rose">Locatie</span>
+        <h2 class="mt-4 text-3xl md:text-4xl">
+          Bezoek op <span class="italic text-turquoise-deep">afspraak</span>.
+        </h2>
+        <address class="not-italic mt-6 text-lg leading-relaxed">
+          {site.fullName}<br />
+          {site.address.street}<br />
+          {site.address.postalCode} {site.address.city}
+        </address>
+        <p class="mt-6 text-sm text-ink-mute">
+          We ontvangen graag — maar werken bewust op afspraak, zodat we de tijd kunnen nemen voor jou en voor onze poezen.
+        </p>
+        <div class="mt-8 grid sm:grid-cols-2 gap-3 max-w-md">
+          <div class="bg-cream rounded-2xl p-4 border border-line/60">
+            <span class="text-xs uppercase tracking-[0.2em] text-ink-mute">KvK</span>
+            <div class="mt-1 font-medium">{site.kvk}</div>
+          </div>
+          <div class="bg-cream rounded-2xl p-4 border border-line/60">
+            <span class="text-xs uppercase tracking-[0.2em] text-ink-mute">Bedrijfsnaam</span>
+            <div class="mt-1 font-medium">{site.legalName}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+        <div class="rounded-3xl overflow-hidden border border-line/60 shadow-card">
+          <iframe
+            title="Kaart — Arnhem"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=5.92%2C51.96%2C5.95%2C51.99&layer=mapnik"
+            class="w-full h-[320px] md:h-[420px]"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTAKE TIPS ────────────────────────────────────── -->
+  <section class="py-24">
+    <div class="container-soft max-w-3xl">
+      <span class="eyebrow">Wat helpt</span>
+      <h2 class="mt-4 text-3xl md:text-4xl">
+        Een goed eerste <span class="italic text-rose-deep">berichtje</span>.
+      </h2>
+      <p class="mt-5">
+        Heb je interesse in een kitten? Dan helpt het als je in je eerste mail of app kort iets vertelt over:
+      </p>
+      <ul class="mt-6 space-y-3">
+        <li class="flex gap-3"><span class="text-rose-deep mt-1"><CatIcon name="paw" size={14} /></span><span>Wie er in het huishouden wonen — kinderen, andere huisdieren, leefritme.</span></li>
+        <li class="flex gap-3"><span class="text-rose-deep mt-1"><CatIcon name="paw" size={14} /></span><span>Of er overdag (vaak) iemand thuis is.</span></li>
+        <li class="flex gap-3"><span class="text-rose-deep mt-1"><CatIcon name="paw" size={14} /></span><span>Heb je al ervaring met katten? En wat sprak je aan in de Ragdoll?</span></li>
+        <li class="flex gap-3"><span class="text-rose-deep mt-1"><CatIcon name="paw" size={14} /></span><span>Op welke termijn je een kitten zou willen.</span></li>
+      </ul>
+      <p class="mt-6 text-sm text-ink-mute">
+        We reageren niet altijd binnen het uur, maar wel altijd persoonlijk. Beloofd.
+      </p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Placeholder from '../components/Placeholder.astro';
+import CatIcon from '../components/CatIcon.astro';
+import { ragdollIntro, ragdollFacts } from '../data/ragdoll';
+---
+
+<Layout
+  title="De Ragdoll"
+  description="Alles over het Ragdoll-ras — karakter, uiterlijk, verzorging en wat een Ragdoll zo bijzonder maakt als gezinskat."
+>
+  <!-- ── HEADER ─────────────────────────────────────────── -->
+  <section class="relative overflow-hidden pt-16 pb-12">
+    <div class="soft-blob bg-blush w-[420px] h-[420px] -top-20 -right-24"></div>
+    <div class="container-soft relative grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 reveal">
+        <span class="eyebrow">Het ras</span>
+        <h1 class="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
+          De <span class="italic text-rose-deep">Ragdoll</span>
+        </h1>
+        <div class="mt-6 space-y-4 max-w-xl">
+          {ragdollIntro.map((p) => <p class="text-lg leading-relaxed">{p}</p>)}
+        </div>
+      </div>
+      <div class="lg:col-span-5 reveal">
+        <Placeholder
+          src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6"
+          alt="Ragdoll-poes met diepblauwe ogen, in een lichte kamer"
+          variant="mint"
+          ratio="4 / 5"
+          rounded="28px"
+          class="shadow-card"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── KENMERKEN ──────────────────────────────────────── -->
+  <section class="py-20 bg-cream-warm border-y border-line/40">
+    <div class="container-soft">
+      <div class="max-w-2xl mb-12 reveal">
+        <span class="eyebrow eyebrow-rose">Kenmerken</span>
+        <h2 class="mt-4 text-3xl md:text-4xl">
+          Wat maakt een Ragdoll <span class="italic text-turquoise-deep">een Ragdoll</span>?
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {ragdollFacts.map((f, i) => (
+          <div class="reveal bg-cream rounded-2xl p-6 border border-line/60">
+            <span class:list={[
+              'grid place-items-center w-11 h-11 rounded-full mb-4',
+              i % 2 === 0 ? 'bg-mint text-teal' : 'bg-blush text-rose-deep',
+            ]}>
+              <CatIcon name={f.icon} />
+            </span>
+            <h3 class="font-display text-xl">{f.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed">{f.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VERZORGING ─────────────────────────────────────── -->
+  <section class="py-24">
+    <div class="container-soft grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 reveal lg:order-2">
+        <Placeholder
+          src="https://images.unsplash.com/photo-1543852786-1cf6624b9987"
+          alt="Ragdoll-kat wordt zachtjes geknuffeld"
+          variant="blush"
+          ratio="4 / 5"
+          rounded="28px"
+          class="shadow-card"
+        />
+      </div>
+      <div class="lg:col-span-7 reveal space-y-5">
+        <span class="eyebrow">Verzorging</span>
+        <h2 class="mt-3 text-3xl md:text-4xl">Eenvoudiger dan je denkt</h2>
+        <p>
+          Hoewel de Ragdoll een halflange vacht heeft, is verzorging verrassend eenvoudig. Doordat de ondervacht nauwelijks aanwezig is, klitten ze minder snel dan andere langharige rassen.
+        </p>
+        <p>
+          Te vaak kammen wordt zelfs afgeraden — het stimuleert juist haaruitval. Een goede haarbalpasta en een uitgebalanceerd voer doen vaak meer dan een borstel. Als ze ruien, helpt het wel om af en toe los haar weg te kammen.
+        </p>
+        <p>
+          Wat je vooral nodig hebt: een rustig huishouden, een paar zachte plekjes om te liggen, en aandacht. Veel aandacht. Een Ragdoll wíl dichtbij zijn.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GEZONDHEID ─────────────────────────────────────── -->
+  <section class="py-20 bg-mint/40 paw-pattern">
+    <div class="container-soft max-w-3xl">
+      <div class="reveal">
+        <span class="eyebrow eyebrow-rose">Gezondheid</span>
+        <h2 class="mt-4 text-3xl md:text-4xl">
+          Bewust fokken, <span class="italic text-turquoise-deep">bewust testen</span>.
+        </h2>
+        <div class="mt-6 space-y-4">
+          <p>
+            Net als bij veel raszuivere katten zijn er bij Ragdolls een paar erfelijke aandoeningen om alert op te zijn — met name HCM (een hartaandoening) en PKD (een nieraandoening).
+          </p>
+          <p>
+            Daarom worden onze ouderdieren getest voordat we tot een nestje overgaan. Dat is voor ons een vanzelfsprekendheid: een gezonde basis is het belangrijkste cadeau dat we onze kittens — en hun toekomstige gezin — kunnen geven.
+          </p>
+          <p>
+            Een gezonde Ragdoll kan tussen de 12 en 15 jaar oud worden. Daarbij past goed voer, een rustige omgeving en jaarlijkse controle bij de dierenarts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="py-24">
+    <div class="container-soft text-center max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl md:text-4xl">
+        Past een Ragdoll bij <span class="italic text-rose-deep">jou</span>?
+      </h2>
+      <p class="mt-5">
+        Wij denken graag mee. Een eerste kennismaking is altijd vrijblijvend — gewoon om elkaar te leren kennen.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/contact" class="btn-primary">
+          Plan een kennismaking
+          <CatIcon name="arrow" size={14} />
+        </a>
+        <a href="/ons-beleid" class="btn-secondary">Lees ons beleid</a>
+      </div>
+    </div>
+  </section>
+</Layout>

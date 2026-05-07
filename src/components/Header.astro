@@ -1,0 +1,85 @@
+---
+import { navItems, site } from '../data/site';
+import CatIcon from './CatIcon.astro';
+
+const path = Astro.url.pathname;
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+
+<header class="sticky top-0 z-40 backdrop-blur bg-cream/85 border-b border-line/60">
+  <div class="container-soft flex items-center justify-between gap-4 py-4">
+    <a href="/" class="leading-tight shrink-0" aria-label={`Home — ${site.fullName}`}>
+      <span class="block font-display text-base sm:text-lg md:text-xl tracking-tight text-ink">
+        Cattery <span class="italic text-rose-deep">Pecinta Kucing</span>
+      </span>
+      <span class="block text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.26em] text-ink-mute mt-1">
+        Ragdoll · Arnhem
+      </span>
+    </a>
+
+    <nav aria-label="Hoofdmenu" class="hidden xl:flex items-center gap-6">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'text-sm transition-colors hover:text-rose-deep',
+            isActive(item.href) ? 'text-rose-deep' : 'text-ink-soft',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="/contact" class="hidden md:inline-flex btn-primary text-sm">
+        Plan een kennismaking
+      </a>
+
+      <button
+        type="button"
+        class="xl:hidden grid place-items-center w-11 h-11 rounded-full border border-line text-ink hover:border-rose/40 transition-colors"
+        aria-label="Menu openen"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-toggle
+      >
+        <CatIcon name="menu" size={22} />
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="xl:hidden hidden border-t border-line/60 bg-cream"
+    data-menu
+  >
+    <nav aria-label="Mobielmenu" class="container-soft py-4 flex flex-col gap-1">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'py-3 px-2 rounded-lg text-base transition-colors',
+            isActive(item.href) ? 'text-rose-deep bg-blush/40' : 'text-ink hover:bg-mint/60',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="/contact" class="btn-primary mt-3 w-full md:hidden">
+        Plan een kennismaking
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const menu = document.querySelector<HTMLElement>('[data-menu]');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden') === false;
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+</script>

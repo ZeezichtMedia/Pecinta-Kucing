@@ -1,0 +1,250 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Placeholder from '../components/Placeholder.astro';
+import CatIcon from '../components/CatIcon.astro';
+import { cats } from '../data/cats';
+import { site } from '../data/site';
+import { ragdollFacts } from '../data/ragdoll';
+
+const pillars = [
+  { icon: 'home', title: 'Opgegroeid in huis', text: 'Onze kittens groeien op tussen onze kinderen, gewoon in de woonkamer.' },
+  { icon: 'heart', title: 'Persoonlijk contact', text: 'We nemen graag de tijd voor een gesprek voordat een kitten meegaat.' },
+  { icon: 'sparkle', title: 'Met stamboom', text: 'Iedere kitten gaat met officiële stamboom, vaccinaties en chip mee.' },
+  { icon: 'paw', title: 'Klein en bewust', text: 'Een kleine cattery — geen lopende band, alleen een goed thuis.' },
+] as const;
+
+const heroPhoto = {
+  src: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6',
+  alt: 'Ragdoll-poes met blauwe ogen, rustend in een lichte kamer',
+};
+
+const aboutPhoto = {
+  src: 'https://images.unsplash.com/photo-1574158622682-e40e69881006',
+  alt: 'Ragdoll-kitten in de armen van zijn baasje',
+};
+---
+
+<Layout
+  title="Ragdoll Cattery in Arnhem"
+  description="Cattery Pecinta Kucing — een kleine, persoonlijke Ragdoll-cattery in Arnhem. Onze kittens groeien op in huis, met liefde, rust en aandacht."
+>
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section class="relative overflow-hidden">
+    <div class="soft-blob bg-blush w-[440px] h-[440px] -top-32 -left-24"></div>
+    <div class="soft-blob bg-mint w-[380px] h-[380px] top-32 right-0"></div>
+
+    <div class="container-soft relative grid lg:grid-cols-2 gap-14 items-center pt-16 pb-24 lg:pt-24 lg:pb-32">
+      <div class="reveal">
+        <span class="eyebrow">Ragdoll Cattery · Arnhem</span>
+        <h1 class="mt-5 font-display text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl">
+          Een
+          <span class="italic text-rose-deep">liefdevol</span>
+          thuis voor onze
+          <span class="italic text-turquoise-deep">kittens</span>.
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed">
+          Cattery Pecinta Kucing is een kleine, persoonlijke cattery in Arnhem. Onze Ragdolls — Coco en Zaza — vormen het hart van ons gezin. Hun kittens groeien op in huis, met rust en aandacht.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/kittens" class="btn-primary">
+            Bekijk onze kittens
+            <CatIcon name="arrow" size={14} />
+          </a>
+          <a href="/de-cattery" class="btn-secondary">Over de cattery</a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-3 text-sm text-ink-mute">
+          <span class="chip"><CatIcon name="paw" size={14} /> Met stamboom</span>
+          <span class="chip-rose chip"><CatIcon name="heart" size={14} /> Opgegroeid in huis</span>
+        </div>
+      </div>
+
+      <div class="reveal relative">
+        <div class="absolute -inset-4 bg-mint/40 blur-2xl rounded-[40px]"></div>
+        <Placeholder
+          src={heroPhoto.src}
+          alt={heroPhoto.alt}
+          variant="mint"
+          ratio="4 / 5"
+          rounded="32px"
+          width={1100}
+          loading="eager"
+          class="relative shadow-card"
+        />
+        <div class="absolute -bottom-6 -left-6 bg-cream rounded-2xl shadow-card p-5 max-w-[230px]">
+          <div class="flex items-center gap-2 text-rose-deep">
+            <CatIcon name="heart" size={16} />
+            <span class="text-xs uppercase tracking-[0.18em] font-medium">Met liefde</span>
+          </div>
+          <p class="mt-2 text-sm text-ink">"Een kitten kiezen is een keuze voor 12 tot 15 jaar — die maak je samen."</p>
+          <p class="mt-1 text-xs text-ink-mute">— Rachèl</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PILLARS ────────────────────────────────────────── -->
+  <section class="py-20 bg-cream-warm border-y border-line/40">
+    <div class="container-soft">
+      <div class="max-w-2xl">
+        <span class="eyebrow eyebrow-rose">Waarom Pecinta Kucing</span>
+        <h2 class="mt-4 text-3xl md:text-4xl">
+          Een kleine cattery met aandacht voor <span class="italic text-turquoise-deep">elk kitten</span>.
+        </h2>
+      </div>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {pillars.map((p) => (
+          <div class="reveal bg-cream rounded-2xl p-6 border border-line/60 hover:border-rose/40 transition-colors">
+            <span class="grid place-items-center w-11 h-11 rounded-full bg-mint text-teal mb-4">
+              <CatIcon name={p.icon} />
+            </span>
+            <h3 class="font-display text-xl">{p.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed">{p.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT PREVIEW ──────────────────────────────────── -->
+  <section class="py-24">
+    <div class="container-soft grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 reveal">
+        <Placeholder
+          src={aboutPhoto.src}
+          alt={aboutPhoto.alt}
+          variant="blush"
+          ratio="4 / 5"
+          rounded="28px"
+          width={900}
+          class="shadow-card"
+        />
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <span class="eyebrow">Even voorstellen</span>
+        <h2 class="mt-4 text-3xl md:text-4xl">
+          Hoi, ik ben <span class="italic text-rose-deep">Rachèl</span>.
+        </h2>
+        <div class="mt-5 space-y-4 max-w-xl">
+          <p>
+            Mijn liefde voor poezen begon bij een Siamese kater die Jozef heette — mijn beste vriend uit mijn jeugd. Toen mijn kinderen Mats en Tirza een eigen poes wilden, beloofde ik dat het zou gebeuren zodra ik wat meer thuis was.
+          </p>
+          <p>
+            Na lang zoeken kwamen we uit op de Ragdoll. Onze zoon heeft een poezenallergie, dus we testten eerst bij fokker Ilse of het zou werken — en het werkte. Een paar maanden later waren Coco en Zaza onderweg naar ons toe.
+          </p>
+        </div>
+        <a href="/de-cattery" class="inline-flex items-center gap-2 mt-7 text-rose-deep hover:text-rose transition-colors text-sm font-medium">
+          Lees ons hele verhaal
+          <CatIcon name="arrow" size={14} />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ONZE POEZEN ────────────────────────────────────── -->
+  <section class="py-24 bg-mint/40 paw-pattern">
+    <div class="container-soft">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <div class="max-w-xl">
+          <span class="eyebrow eyebrow-rose">Onze poezen</span>
+          <h2 class="mt-4 text-3xl md:text-4xl">
+            Coco &amp; Zaza — <span class="italic text-turquoise-deep">het hart van de cattery</span>.
+          </h2>
+        </div>
+        <a href="/onze-poezen" class="btn-secondary self-start md:self-auto">Lees meer</a>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {cats.map((cat) => (
+          <a
+            href={`/onze-poezen#${cat.slug}`}
+            class="reveal group bg-cream rounded-3xl overflow-hidden border border-line/60 hover:shadow-card transition-all flex flex-col"
+          >
+            <Placeholder
+              src={cat.image.src}
+              alt={cat.image.alt}
+              variant="cream"
+              ratio="4 / 3"
+              rounded="0"
+              width={900}
+              class="border-b border-line/50"
+            />
+            <div class="p-7">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="font-display text-2xl">{cat.name}</h3>
+                <span class="text-xs uppercase tracking-[0.18em] text-turquoise-deep">{cat.color.split('—')[1]?.trim() ?? cat.color}</span>
+              </div>
+              <p class="mt-1 text-sm text-ink-mute italic">{cat.role}</p>
+              <p class="mt-4 text-sm">{cat.short}</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                {cat.traits.map((t) => <span class="chip">{t}</span>)}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RAGDOLL TEASER ─────────────────────────────────── -->
+  <section class="py-24">
+    <div class="container-soft">
+      <div class="max-w-2xl mb-12">
+        <span class="eyebrow">Het ras</span>
+        <h2 class="mt-4 text-3xl md:text-4xl">
+          Wat maakt een Ragdoll <span class="italic text-rose-deep">zo bijzonder</span>?
+        </h2>
+        <p class="mt-5">
+          Een lieve, halflangharige kat met diepblauwe ogen en een opvallend rustig karakter — vandaar ook hun naam, &lsquo;lappenpop&rsquo;.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {ragdollFacts.slice(0, 3).map((f) => (
+          <div class="reveal bg-cream-warm rounded-2xl p-6 border border-line/40">
+            <span class="grid place-items-center w-11 h-11 rounded-full bg-blush text-rose-deep mb-4">
+              <CatIcon name={f.icon} />
+            </span>
+            <h3 class="font-display text-xl">{f.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed">{f.body}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-10">
+        <a href="/de-ragdoll" class="inline-flex items-center gap-2 text-rose-deep hover:text-rose transition-colors text-sm font-medium">
+          Meer over het ras
+          <CatIcon name="arrow" size={14} />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="pb-24">
+    <div class="container-soft">
+      <div class="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-turquoise via-turquoise-deep to-teal text-cream p-10 md:p-16">
+        <div class="soft-blob bg-cream/30 w-[280px] h-[280px] -top-20 -right-20"></div>
+        <div class="soft-blob bg-blush/40 w-[220px] h-[220px] -bottom-20 -left-12"></div>
+        <div class="relative max-w-2xl">
+          <h2 class="font-display text-2xl sm:text-3xl md:text-5xl text-cream">
+            Op zoek naar een Ragdoll-kitten <span class="italic">met een goed verhaal</span>?
+          </h2>
+          <p class="mt-5 text-cream/85 text-lg max-w-lg">
+            We nemen graag de tijd voor een persoonlijk gesprek — via de mail, telefonisch of via WhatsApp. Zo leren we elkaar rustig kennen.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="/contact" class="inline-flex items-center gap-2 bg-cream text-ink px-6 py-3 rounded-full font-medium hover:bg-cream/90 transition-colors">
+              Plan een kennismaking
+              <CatIcon name="arrow" size={14} />
+            </a>
+            <a href={site.whatsappUrl} target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 border border-cream/40 text-cream px-6 py-3 rounded-full font-medium hover:bg-cream/10 transition-colors">
+              <CatIcon name="whatsapp" size={16} />
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

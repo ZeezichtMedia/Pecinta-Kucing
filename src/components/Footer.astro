@@ -1,0 +1,143 @@
+---
+import { navItems, site } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-32 bg-cream-warm border-t border-line/60 relative overflow-hidden">
+  <div class="soft-blob bg-mint w-[320px] h-[320px] -top-32 -right-20 opacity-40"></div>
+  <div class="soft-blob bg-blush w-[240px] h-[240px] bottom-0 -left-12 opacity-50"></div>
+
+  <div class="container-soft relative py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <div class="font-display text-2xl leading-tight">
+        Cattery<br />
+        <span class="italic text-rose-deep">Pecinta Kucing</span>
+      </div>
+      <p class="mt-4 text-sm leading-relaxed">
+        Een kleine, persoonlijke Ragdoll-cattery uit Arnhem. Onze kittens groeien op in huis, met liefde, rust en aandacht.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg mb-4">Menu</h4>
+      <ul class="space-y-2 text-sm">
+        {navItems.map((i) => (
+          <li><a href={i.href} class="text-ink-soft hover:text-rose-deep transition-colors">{i.label}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg mb-4">Contact</h4>
+      <address class="not-italic text-sm space-y-2 text-ink-soft">
+        <div>{site.address.street}</div>
+        <div>{site.address.postalCode} {site.address.city}</div>
+        <div class="pt-2">
+          <a href={`tel:${site.phone.replace(/\s/g, '')}`} class="hover:text-rose-deep transition-colors">{site.phoneDisplay}</a>
+        </div>
+        <div>
+          <a href={`mailto:${site.email}`} class="hover:text-rose-deep transition-colors break-all">{site.email}</a>
+        </div>
+        <div class="pt-2 text-ink-mute">{site.hours}</div>
+      </address>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg mb-4">Even kennismaken?</h4>
+      <p class="text-sm leading-relaxed">
+        We nemen graag de tijd voor een persoonlijk gesprek voordat we tot een afspraak komen.
+      </p>
+      <a href="/contact" class="btn-primary mt-5 text-sm">
+        Neem contact op
+      </a>
+    </div>
+  </div>
+
+  <div class="border-t border-line/60 relative">
+    <div class="container-soft py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-ink-mute">
+      <div>© {year} {site.fullName} · {site.legalName} · KvK {site.kvk}</div>
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <a
+          href="https://agensea.nl"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Website ontworpen en gebouwd door Agensea"
+          class="agensea-credit group inline-flex items-center gap-3"
+        >
+          <span class="credit-label">Gebouwd door</span>
+          <img
+            src="/brand/agensea-logo.svg"
+            alt="Agensea"
+            width="140"
+            height="37"
+            class="credit-logo"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="credit-arrow" aria-hidden="true">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17L17 7M17 7H8M17 7V16"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* ── Agensea credit — donkergrijs op cream-warm, indigo-halo bij hover ── */
+  .agensea-credit { text-decoration: none; color: inherit; position: relative; }
+  .agensea-credit:focus-visible {
+    outline: 2px solid #6366F1;
+    outline-offset: 6px;
+    border-radius: 2px;
+  }
+  .credit-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    color: var(--color-ink-mute);
+  }
+  .credit-logo {
+    height: 22px;
+    width: auto;
+    filter: brightness(0);
+    opacity: 0.7;
+    transition:
+      opacity 500ms cubic-bezier(0.16, 1, 0.3, 1),
+      filter 500ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: left center;
+    will-change: filter, transform;
+  }
+  .credit-arrow {
+    display: inline-flex;
+    align-items: center;
+    color: #6366F1;
+    opacity: 0;
+    transform: translate(-6px, 2px);
+    transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .agensea-credit:hover .credit-label { opacity: 0.95; }
+  .agensea-credit:hover .credit-logo {
+    opacity: 1;
+    filter:
+      brightness(0)
+      drop-shadow(0 0 6px rgba(99, 102, 241, 0.35))
+      drop-shadow(0 0 14px rgba(99, 102, 241, 0.18));
+    transform: scale(1.03);
+  }
+  .agensea-credit:hover .credit-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .credit-label, .credit-logo, .credit-arrow { transition: opacity 200ms ease; }
+    .agensea-credit:hover .credit-logo { transform: none; }
+  }
+</style>

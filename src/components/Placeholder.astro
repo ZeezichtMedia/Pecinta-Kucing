@@ -1,0 +1,49 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  ratio?: string;
+  rounded?: string;
+  variant?: 'mint' | 'blush' | 'shell' | 'cream';
+  width?: number;
+  loading?: 'eager' | 'lazy';
+  class?: string;
+}
+
+const {
+  src,
+  alt,
+  ratio = '4 / 5',
+  rounded = '24px',
+  variant = 'mint',
+  width = 1100,
+  loading = 'lazy',
+  class: className = '',
+} = Astro.props;
+
+const bg = {
+  mint: 'var(--color-mint)',
+  blush: 'var(--color-blush)',
+  shell: 'var(--color-shell)',
+  cream: 'var(--color-cream-warm)',
+}[variant];
+
+// Bouw automatisch een geoptimaliseerde Unsplash-URL — de stockfoto's leveren
+// daardoor een goed gewogen versie i.p.v. de volledige originele afbeelding.
+const optimized = src.includes('?')
+  ? src
+  : `${src}?w=${width}&q=80&auto=format&fit=crop`;
+---
+
+<div
+  class={`relative overflow-hidden ${className}`}
+  style={`aspect-ratio: ${ratio}; border-radius: ${rounded}; background-color: ${bg};`}
+>
+  <img
+    src={optimized}
+    alt={alt}
+    loading={loading}
+    decoding="async"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+</div>

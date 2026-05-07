@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Colors ─────────────────────────────────────
+     Warm modern palet — cream basis, dusty rose en
+     turquoise als duo-accent. Zacht, niet schreeuwerig. */
+  --color-cream: #FBF7F4;
+  --color-cream-warm: #F6EFE9;
+  --color-shell: #EFE3DA;
+  --color-blush: #F3D5DA;
+  --color-rose: #E7A6B0;
+  --color-rose-deep: #D27A88;
+  --color-mint: #DCEFEC;
+  --color-turquoise: #7CC9C2;
+  --color-turquoise-deep: #3FA39A;
+  --color-teal: #2C7A74;
+  --color-ink: #2A2326;
+  --color-ink-soft: #5C4F53;
+  --color-ink-mute: #8E7F84;
+  --color-line: #ECDFD5;
+
+  /* ── Typography ─────────────────────────────── */
+  --font-display: "Cormorant Garamond", "Playfair Display", "Georgia", serif;
+  --font-body: "Manrope", "Inter", system-ui, sans-serif;
+
+  /* ── Radii ──────────────────────────────────── */
+  --radius-soft: 16px;
+  --radius-pill: 999px;
+
+  /* ── Shadows ────────────────────────────────── */
+  --shadow-soft: 0 8px 30px rgba(42, 35, 38, 0.06);
+  --shadow-card: 0 14px 44px rgba(42, 35, 38, 0.09);
+  --shadow-rose: 0 12px 32px rgba(210, 122, 136, 0.22);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+  }
+
+  ::selection {
+    background: var(--color-blush);
+    color: var(--color-ink);
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.012em;
+    color: var(--color-ink);
+    line-height: 1.1;
+  }
+
+  p {
+    color: var(--color-ink-soft);
+    line-height: 1.75;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Italic Cormorant heeft soms krappe rechtermarge. */
+  .italic { padding-right: 0.04em; }
+}
+
+/* ── Components ──────────────────────────────── */
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.65rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-rose);
+    color: var(--color-cream);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    transition: background-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+    box-shadow: var(--shadow-rose);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-rose-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 16px 36px rgba(210, 122, 136, 0.32);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: var(--radius-pill);
+    background-color: transparent;
+    color: var(--color-ink);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    border: 1px solid var(--color-line);
+    transition: border-color 220ms ease, background-color 220ms ease, color 220ms ease;
+  }
+  .btn-secondary:hover {
+    border-color: var(--color-turquoise);
+    background-color: rgba(124, 201, 194, 0.10);
+    color: var(--color-teal);
+  }
+
+  .btn-ghost-turquoise {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-mint);
+    color: var(--color-teal);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 220ms ease, transform 220ms ease;
+  }
+  .btn-ghost-turquoise:hover {
+    background-color: rgba(124, 201, 194, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--color-turquoise-deep);
+    font-weight: 600;
+  }
+
+  .eyebrow-rose { color: var(--color-rose-deep); }
+
+  .container-soft {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    background-color: var(--color-mint);
+    color: var(--color-teal);
+    border: 1px solid rgba(63, 163, 154, 0.18);
+  }
+
+  .chip-rose {
+    background-color: var(--color-blush);
+    color: var(--color-rose-deep);
+    border-color: rgba(210, 122, 136, 0.22);
+  }
+}
+
+/* ── Reveal animations ───────────────────────── */
+.reveal { opacity: 1; transform: translateY(0); }
+
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+html.js .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Decoratieve blobs ───────────────────────── */
+.soft-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Pootjes-pattern overlay (subtiel) ───────── */
+.paw-pattern {
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(124, 201, 194, 0.12) 1.5px, transparent 2px),
+    radial-gradient(circle at 70% 70%, rgba(231, 166, 176, 0.14) 1.5px, transparent 2px);
+  background-size: 60px 60px, 80px 80px;
+  background-position: 0 0, 30px 30px;
+}
