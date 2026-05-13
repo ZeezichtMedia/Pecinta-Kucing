@@ -59,22 +59,14 @@ const year = new Date().getFullYear();
       <div>© {year} {site.fullName} · {site.legalName} · KvK {site.kvk}</div>
       <div class="flex flex-col md:flex-row items-center gap-4">
         <a
-          href="https://agensea.nl"
+          href="https://i-quip.nl"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Website ontworpen en gebouwd door Agensea"
-          class="agensea-credit group inline-flex items-center gap-3"
+          aria-label="Website ontworpen en gebouwd door I-quip"
+          class="iquip-credit group inline-flex items-center gap-3"
         >
           <span class="credit-label">Gebouwd door</span>
-          <img
-            src="/brand/agensea-logo.svg"
-            alt="Agensea"
-            width="140"
-            height="37"
-            class="credit-logo"
-            loading="lazy"
-            decoding="async"
-          />
+          <span class="credit-name">I-quip</span>
           <span class="credit-arrow" aria-hidden="true">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17L17 7M17 7H8M17 7V16"/>
@@ -87,9 +79,8 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
-  /* ── Agensea credit — donkergrijs op cream-warm, indigo-halo bij hover ── */
-  .agensea-credit { text-decoration: none; color: inherit; position: relative; }
-  .agensea-credit:focus-visible {
+  .iquip-credit { text-decoration: none; color: inherit; position: relative; }
+  .iquip-credit:focus-visible {
     outline: 2px solid #6366F1;
     outline-offset: 6px;
     border-radius: 2px;
@@ -103,17 +94,18 @@ const year = new Date().getFullYear();
     transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
     color: var(--color-ink-mute);
   }
-  .credit-logo {
-    height: 22px;
-    width: auto;
-    filter: brightness(0);
-    opacity: 0.7;
+  .credit-name {
+    font-family: var(--font-display, inherit);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-ink, #1a1a1a);
+    opacity: 0.85;
     transition:
       opacity 500ms cubic-bezier(0.16, 1, 0.3, 1),
-      filter 500ms cubic-bezier(0.16, 1, 0.3, 1),
+      color 500ms cubic-bezier(0.16, 1, 0.3, 1),
       transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
     transform-origin: left center;
-    will-change: filter, transform;
   }
   .credit-arrow {
     display: inline-flex;
@@ -123,21 +115,18 @@ const year = new Date().getFullYear();
     transform: translate(-6px, 2px);
     transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .agensea-credit:hover .credit-label { opacity: 0.95; }
-  .agensea-credit:hover .credit-logo {
+  .iquip-credit:hover .credit-label { opacity: 0.95; }
+  .iquip-credit:hover .credit-name {
     opacity: 1;
-    filter:
-      brightness(0)
-      drop-shadow(0 0 6px rgba(99, 102, 241, 0.35))
-      drop-shadow(0 0 14px rgba(99, 102, 241, 0.18));
+    color: #6366F1;
     transform: scale(1.03);
   }
-  .agensea-credit:hover .credit-arrow {
+  .iquip-credit:hover .credit-arrow {
     opacity: 1;
     transform: translate(0, 0);
   }
   @media (prefers-reduced-motion: reduce) {
-    .credit-label, .credit-logo, .credit-arrow { transition: opacity 200ms ease; }
-    .agensea-credit:hover .credit-logo { transform: none; }
+    .credit-label, .credit-name, .credit-arrow { transition: opacity 200ms ease; }
+    .iquip-credit:hover .credit-name { transform: none; }
   }
 </style>
