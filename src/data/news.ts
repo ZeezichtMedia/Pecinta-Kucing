@@ -17,9 +17,9 @@ export const news: NewsItem[] = [
   },
   {
     date: '2025-04-12',
-    title: 'Allergietest bij fokker Ilse — geslaagd',
+    title: 'Allergietest bij fokker Ilse, geslaagd',
     body:
-      'Voordat we de stap zetten, hebben we onze zoon laten testen op een allergische reactie. Dankzij de medewerking van fokker Ilse — en haar huis vol Ragdolls — kregen we groen licht.',
+      'Voordat we de stap zetten, hebben we onze zoon laten testen op een allergische reactie. Dankzij de medewerking van fokker Ilse, en haar huis vol Ragdolls, kregen we groen licht.',
     tag: 'Verhaal',
   },
   {

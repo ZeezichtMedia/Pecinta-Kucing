@@ -3,7 +3,7 @@ export const site = {
   fullName: 'Ragdoll Cattery Pecinta Kucing',
   tagline: 'Liefdevolle Ragdoll-cattery uit Arnhem',
   description:
-    'Ragdoll Cattery Pecinta Kucing — een kleine, persoonlijke cattery in Arnhem. Onze kittens groeien op in huis, met liefde, rust en aandacht.',
+    'Ragdoll Cattery Pecinta Kucing, een kleine, persoonlijke cattery in Arnhem. Onze kittens groeien op in huis, met liefde, rust en aandacht.',
   owner: 'Rachèl de Bekker',
   legalName: 'InTenCA',
   address: {

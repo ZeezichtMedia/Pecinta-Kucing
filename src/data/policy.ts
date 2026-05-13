@@ -4,13 +4,13 @@ export interface PolicyPoint {
 }
 
 export const policyIntro =
-  'Onze cattery is klein en persoonlijk. We fokken niet om het fokken — we fokken omdat we van het ras houden en omdat we onze kittens een goede start willen geven. Daarom werken we met een aantal heldere uitgangspunten.';
+  'Onze cattery is klein en persoonlijk. We fokken niet om het fokken, we fokken omdat we van het ras houden en omdat we onze kittens een goede start willen geven. Daarom werken we met een aantal heldere uitgangspunten.';
 
 export const policyPoints: PolicyPoint[] = [
   {
     title: 'Opgegroeid in huis',
     body:
-      'Onze kittens groeien op in onze woonkamer, tussen de kinderen en het normale gezinsleven. Geen aparte kamer of kennel — ze leren vanaf dag één wat een echt thuis is.',
+      'Onze kittens groeien op in onze woonkamer, tussen de kinderen en het normale gezinsleven. Geen aparte kamer of kennel, ze leren vanaf dag één wat een echt thuis is.',
   },
   {
     title: 'Klaar voor hun nieuwe thuis vanaf 14 weken',
@@ -25,7 +25,7 @@ export const policyPoints: PolicyPoint[] = [
   {
     title: 'Een goed gevoel telt',
     body:
-      'We hebben graag een persoonlijk contactmoment met geïnteresseerden. Het moet voor beide kanten goed voelen — voor ons én voor de kitten die naar je toe komt.',
+      'We hebben graag een persoonlijk contactmoment met geïnteresseerden. Het moet voor beide kanten goed voelen, voor ons én voor de kitten die naar je toe komt.',
   },
   {
     title: 'Wij blijven betrokken',

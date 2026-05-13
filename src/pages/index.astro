@@ -10,7 +10,7 @@ const pillars = [
   { icon: 'home', title: 'Opgegroeid in huis', text: 'Onze kittens groeien op tussen onze kinderen, gewoon in de woonkamer.' },
   { icon: 'heart', title: 'Persoonlijk contact', text: 'We nemen graag de tijd voor een gesprek voordat een kitten meegaat.' },
   { icon: 'sparkle', title: 'Met stamboom', text: 'Iedere kitten gaat met officiële stamboom, vaccinaties en chip mee.' },
-  { icon: 'paw', title: 'Klein en bewust', text: 'Een kleine cattery — geen lopende band, alleen een goed thuis.' },
+  { icon: 'paw', title: 'Klein en bewust', text: 'Een kleine cattery, geen lopende band, alleen een goed thuis.' },
 ] as const;
 
 const heroPhoto = {
@@ -26,7 +26,7 @@ const aboutPhoto = {
 
 <Layout
   title="Ragdoll Cattery in Arnhem"
-  description="Cattery Pecinta Kucing — een kleine, persoonlijke Ragdoll-cattery in Arnhem. Onze kittens groeien op in huis, met liefde, rust en aandacht."
+  description="Cattery Pecinta Kucing, een kleine, persoonlijke Ragdoll-cattery in Arnhem. Onze kittens groeien op in huis, met liefde, rust en aandacht."
 >
   <!-- ── HERO ───────────────────────────────────────────── -->
   <section class="relative overflow-hidden">
@@ -43,7 +43,7 @@ const aboutPhoto = {
           <span class="italic text-turquoise-deep">kittens</span>.
         </h1>
         <p class="mt-6 max-w-xl text-lg leading-relaxed">
-          Cattery Pecinta Kucing is een kleine, persoonlijke cattery in Arnhem. Onze Ragdolls — Coco en Zaza — vormen het hart van ons gezin. Hun kittens groeien op in huis, met rust en aandacht.
+          Cattery Pecinta Kucing is een kleine, persoonlijke cattery in Arnhem. Onze Ragdolls, Coco en Zaza, vormen het hart van ons gezin. Hun kittens groeien op in huis, met rust en aandacht.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="/kittens" class="btn-primary">
@@ -76,8 +76,8 @@ const aboutPhoto = {
             <CatIcon name="heart" size={16} />
             <span class="text-xs uppercase tracking-[0.18em] font-medium">Met liefde</span>
           </div>
-          <p class="mt-2 text-sm text-ink">"Een kitten kiezen is een keuze voor 12 tot 15 jaar — die maak je samen."</p>
-          <p class="mt-1 text-xs text-ink-mute">— Rachèl</p>
+          <p class="mt-2 text-sm text-ink">"Een kitten kiezen is een keuze voor 12 tot 15 jaar, die maak je samen."</p>
+          <p class="mt-1 text-xs text-ink-mute">Rachèl</p>
         </div>
       </div>
     </div>
@@ -127,10 +127,10 @@ const aboutPhoto = {
         </h2>
         <div class="mt-5 space-y-4 max-w-xl">
           <p>
-            Mijn liefde voor poezen begon bij een Siamese kater die Jozef heette — mijn beste vriend uit mijn jeugd. Toen mijn kinderen Mats en Tirza een eigen poes wilden, beloofde ik dat het zou gebeuren zodra ik wat meer thuis was.
+            Mijn liefde voor poezen begon bij een Siamese kater die Jozef heette, mijn beste vriend uit mijn jeugd. Toen mijn kinderen Mats en Tirza een eigen poes wilden, beloofde ik dat het zou gebeuren zodra ik wat meer thuis was.
           </p>
           <p>
-            Na lang zoeken kwamen we uit op de Ragdoll. Onze zoon heeft een poezenallergie, dus we testten eerst bij fokker Ilse of het zou werken — en het werkte. Een paar maanden later waren Coco en Zaza onderweg naar ons toe.
+            Na lang zoeken kwamen we uit op de Ragdoll. Onze zoon heeft een poezenallergie, dus we testten eerst bij fokker Ilse of het zou werken, en het werkte. Een paar maanden later waren Coco en Zaza onderweg naar ons toe.
           </p>
         </div>
         <a href="/de-cattery" class="inline-flex items-center gap-2 mt-7 text-rose-deep hover:text-rose transition-colors text-sm font-medium">
@@ -148,7 +148,7 @@ const aboutPhoto = {
         <div class="max-w-xl">
           <span class="eyebrow eyebrow-rose">Onze poezen</span>
           <h2 class="mt-4 text-3xl md:text-4xl">
-            Coco &amp; Zaza — <span class="italic text-turquoise-deep">het hart van de cattery</span>.
+            Coco &amp; Zaza, <span class="italic text-turquoise-deep">het hart van de cattery</span>.
           </h2>
         </div>
         <a href="/onze-poezen" class="btn-secondary self-start md:self-auto">Lees meer</a>
@@ -172,7 +172,7 @@ const aboutPhoto = {
             <div class="p-7">
               <div class="flex items-center justify-between gap-3">
                 <h3 class="font-display text-2xl">{cat.name}</h3>
-                <span class="text-xs uppercase tracking-[0.18em] text-turquoise-deep">{cat.color.split('—')[1]?.trim() ?? cat.color}</span>
+                <span class="text-xs uppercase tracking-[0.18em] text-turquoise-deep">{cat.color.split(',')[1]?.trim() ?? cat.color}</span>
               </div>
               <p class="mt-1 text-sm text-ink-mute italic">{cat.role}</p>
               <p class="mt-4 text-sm">{cat.short}</p>
@@ -195,7 +195,7 @@ const aboutPhoto = {
           Wat maakt een Ragdoll <span class="italic text-rose-deep">zo bijzonder</span>?
         </h2>
         <p class="mt-5">
-          Een lieve, halflangharige kat met diepblauwe ogen en een opvallend rustig karakter — vandaar ook hun naam, &lsquo;lappenpop&rsquo;.
+          Een lieve, halflangharige kat met diepblauwe ogen en een opvallend rustig karakter, vandaar ook hun naam, &lsquo;lappenpop&rsquo;.
         </p>
       </div>
 
@@ -230,7 +230,7 @@ const aboutPhoto = {
             Op zoek naar een Ragdoll-kitten <span class="italic">met een goed verhaal</span>?
           </h2>
           <p class="mt-5 text-cream/85 text-lg max-w-lg">
-            We nemen graag de tijd voor een persoonlijk gesprek — via de mail, telefonisch of via WhatsApp. Zo leren we elkaar rustig kennen.
+            We nemen graag de tijd voor een persoonlijk gesprek, via de mail, telefonisch of via WhatsApp. Zo leren we elkaar rustig kennen.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="/contact" class="inline-flex items-center gap-2 bg-cream text-ink px-6 py-3 rounded-full font-medium hover:bg-cream/90 transition-colors">
