@@ -1,7 +1,7 @@
 export interface RagdollFact {
   title: string;
   body: string;
-  icon: 'paw' | 'heart' | 'sparkle' | 'eye' | 'home' | 'leaf';
+  icon: 'paw' | 'heart' | 'sparkle' | 'eye' | 'home' | 'leaf' | 'brush';
 }
 
 export const ragdollIntro = [
@@ -13,7 +13,7 @@ export const ragdollFacts: RagdollFact[] = [
   {
     title: 'Aanhankelijk karakter',
     body:
-      'Ragdolls staan bekend om hun lieve, aanhankelijke aard. Ze volgen je graag door het huis en zijn vaak omschreven als "hondjes in een kleinverpakking".',
+      'Ragdolls staan bekend om hun lieve, aanhankelijke karakter. Ze volgen je graag door het huis als hondjes.',
     icon: 'heart',
   },
   {
@@ -25,8 +25,8 @@ export const ragdollFacts: RagdollFact[] = [
   {
     title: 'Halflange vacht',
     body:
-      'De vacht is halflang en heeft nauwelijks ondervacht. Dat maakt verzorging eenvoudig, regelmatig kammen is meestal niet nodig en kan haaruitval zelfs versterken.',
-    icon: 'sparkle',
+      'De vacht is halflang en heeft nauwelijks ondervacht. Dat maakt verzorging eenvoudig en vereist wekelijks goed kammen.',
+    icon: 'brush',
   },
   {
     title: 'Sociaal en kindvriendelijk',

@@ -26,7 +26,7 @@ export const site = {
 export const navItems = [
   { label: 'Home', href: '/' },
   { label: 'De cattery', href: '/de-cattery' },
-  { label: 'Onze poezen', href: '/onze-poezen' },
+  { label: 'Onze Ragdolls', href: '/onze-poezen' },
   { label: 'Kittens', href: '/kittens' },
   { label: 'De Ragdoll', href: '/de-ragdoll' },
   { label: 'Nieuws', href: '/nieuws' },
