@@ -6,11 +6,6 @@ export const site = {
     'Ragdoll Cattery Pecinta Kucing, een kleine, persoonlijke cattery in Arnhem. Onze kittens groeien op in huis, met liefde, rust en aandacht.',
   owner: 'Rachèl de Bekker',
   legalName: 'InTenCA',
-  address: {
-    street: 'Herkenboschstraat 40',
-    postalCode: '6845 HN',
-    city: 'Arnhem',
-  },
   phone: '+31 6 51241683',
   phoneDisplay: '06 - 51 24 16 83',
   whatsapp: '0651241683',
