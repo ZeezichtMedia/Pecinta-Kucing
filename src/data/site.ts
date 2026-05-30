@@ -10,7 +10,7 @@ export const site = {
   phoneDisplay: '06 - 51 24 16 83',
   whatsapp: '0651241683',
   whatsappUrl: 'https://wa.me/31651241683',
-  email: 'info@catterypecintakucing.nl',
+  email: 'info@ragdollgelderland.nl',
   facebook: 'https://www.facebook.com/',
   instagram: 'https://www.instagram.com/',
   kvk: '90393090',

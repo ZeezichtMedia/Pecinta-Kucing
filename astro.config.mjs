@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://catterypecintakucing.nl',
+  site: 'https://ragdollgelderland.nl',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
