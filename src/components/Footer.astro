@@ -1,5 +1,6 @@
 ---
-import { navItems, site } from '../data/site';
+import CatIcon from './CatIcon.astro';
+import { navItems, site, credentials } from '../data/site';
 
 const year = new Date().getFullYear();
 ---
@@ -17,6 +18,14 @@ const year = new Date().getFullYear();
       <p class="mt-4 text-sm leading-relaxed">
         Een kleinschalige Ragdoll-cattery uit Arnhem. Onze kittens groeien op in huis, met liefde en aandacht.
       </p>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <a href={credentials.membership.url} target="_blank" rel="noopener noreferrer" class="chip hover:text-rose-deep transition-colors">
+          <CatIcon name="sparkle" size={12} /> {credentials.membership.label}
+        </a>
+        <span class="chip">
+          <CatIcon name="heart" size={12} /> {credentials.certification.label}
+        </span>
+      </div>
     </div>
 
     <div>

@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Placeholder from '../components/Placeholder.astro';
 import CatIcon from '../components/CatIcon.astro';
+import { credentials } from '../data/site';
+import belofteFoto from '../assets/cats/belofte-kittens.jpg';
+import zoektochtFoto from '../assets/cats/coco-zaza-krabpaal.jpg';
+import geboorteFoto from '../assets/cats/coco-kitten.jpg';
 ---
 
 <Layout
@@ -24,36 +28,11 @@ import CatIcon from '../components/CatIcon.astro';
 
   <!-- ── VERHAAL ────────────────────────────────────────── -->
   <section class="py-16">
-    <div class="container-soft grid lg:grid-cols-12 gap-12 items-start">
-      <div class="lg:col-span-5 reveal lg:sticky lg:top-28">
-        <Placeholder
-          src="https://images.unsplash.com/photo-1573865526739-10659fec78a5"
-          alt="Ragdoll-kitten met blauwe ogen, dichtbij gefotografeerd"
-          variant="blush"
-          ratio="4 / 5"
-          rounded="28px"
-          class="shadow-card"
-        />
-        <div class="mt-6 grid grid-cols-2 gap-3">
-          <Placeholder
-            src="https://images.unsplash.com/photo-1543852786-1cf6624b9987"
-            alt="Ragdoll bij raam"
-            variant="mint"
-            ratio="1 / 1"
-            rounded="20px"
-          />
-          <Placeholder
-            src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d"
-            alt="Twee jonge ragdolls samen"
-            variant="cream"
-            ratio="1 / 1"
-            rounded="20px"
-          />
-        </div>
-      </div>
+    <div class="container-soft space-y-16 lg:space-y-24">
 
-      <div class="lg:col-span-7 reveal space-y-10">
-        <div>
+      <!-- Belofte -->
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 reveal">
           <span class="eyebrow">Hoe het begon</span>
           <h2 class="mt-3 text-3xl md:text-4xl">Een belofte aan Mats en Tirza</h2>
           <div class="mt-5 space-y-4">
@@ -65,8 +44,21 @@ import CatIcon from '../components/CatIcon.astro';
             </p>
           </div>
         </div>
+        <div class="lg:col-span-6 reveal">
+          <Placeholder
+            src={belofteFoto}
+            alt="Coco en Zaza als kittens, samen in een mandje"
+            variant="blush"
+            ratio="3 / 2"
+            rounded="28px"
+            class="shadow-card"
+          />
+        </div>
+      </div>
 
-        <div>
+      <!-- Zoektocht (beeld links) -->
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 reveal lg:order-2">
           <span class="eyebrow eyebrow-rose">De zoektocht</span>
           <h2 class="mt-3 text-3xl md:text-4xl">Een ras voor ons hele gezin</h2>
           <div class="mt-5 space-y-4">
@@ -81,8 +73,21 @@ import CatIcon from '../components/CatIcon.astro';
             </p>
           </div>
         </div>
+        <div class="lg:col-span-6 reveal lg:order-1">
+          <Placeholder
+            src={zoektochtFoto}
+            alt="Coco en Zaza samen op de krabpaal"
+            variant="mint"
+            ratio="4 / 5"
+            rounded="28px"
+            class="shadow-card max-w-sm mx-auto"
+          />
+        </div>
+      </div>
 
-        <div>
+      <!-- Geboorte -->
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6 reveal">
           <span class="eyebrow">De geboorte</span>
           <h2 class="mt-3 text-3xl md:text-4xl">Coco en Zaza, geboren op 28 februari 2025</h2>
           <div class="mt-5 space-y-4">
@@ -94,7 +99,18 @@ import CatIcon from '../components/CatIcon.astro';
             </p>
           </div>
         </div>
+        <div class="lg:col-span-6 reveal">
+          <Placeholder
+            src={geboorteFoto}
+            alt="Coco als pasgeboren seal point Ragdoll-kitten"
+            variant="cream"
+            ratio="3 / 2"
+            rounded="28px"
+            class="shadow-card"
+          />
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -126,8 +142,51 @@ import CatIcon from '../components/CatIcon.astro';
     </div>
   </section>
 
-  <!-- ── CTA ────────────────────────────────────────────── -->
+  <!-- ── KEURMERKEN ─────────────────────────────────────── -->
   <section class="py-24">
+    <div class="container-soft">
+      <div class="max-w-2xl mb-12 reveal">
+        <span class="eyebrow eyebrow-rose">Aangesloten &amp; gecertificeerd</span>
+        <h2 class="mt-4 text-3xl md:text-4xl">
+          Fokken met <span class="italic text-turquoise-deep">papieren op orde</span>.
+        </h2>
+        <p class="mt-5">
+          We doen dit klein en met liefde, maar wel volgens de regels. Daarom zijn we aangesloten bij de rasvereniging en fokt Rachèl als gecertificeerd vakbekwaam houder.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4 max-w-4xl">
+        <a
+          href={credentials.membership.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="reveal group bg-cream-warm rounded-2xl p-7 border border-line/50 hover:border-rose/40 transition-colors flex flex-col"
+        >
+          <span class="grid place-items-center w-12 h-12 rounded-full bg-blush text-rose-deep mb-5">
+            <CatIcon name="sparkle" size={20} />
+          </span>
+          <h3 class="font-display text-xl">{credentials.membership.label}</h3>
+          <p class="mt-2 text-sm leading-relaxed">{credentials.membership.description}</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-rose-deep text-sm font-medium">
+            Naar Mundikat
+            <CatIcon name="arrow" size={14} />
+          </span>
+        </a>
+        <div class="reveal bg-cream-warm rounded-2xl p-7 border border-line/50 flex flex-col">
+          <span class="grid place-items-center w-12 h-12 rounded-full bg-mint text-teal mb-5">
+            <CatIcon name="heart" size={20} />
+          </span>
+          <h3 class="font-display text-xl">{credentials.certification.label}</h3>
+          <p class="mt-2 text-sm leading-relaxed">{credentials.certification.description}</p>
+          <span class="mt-4 inline-flex items-center gap-2 text-ink-mute text-xs uppercase tracking-[0.18em]">
+            {credentials.certification.name}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="py-24 bg-cream-warm border-t border-line/40">
     <div class="container-soft text-center max-w-2xl mx-auto">
       <h2 class="font-display text-3xl md:text-4xl">
         Benieuwd naar onze <span class="italic text-rose-deep">Ragdolls</span>?

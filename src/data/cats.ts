@@ -1,3 +1,9 @@
+import type { ImageMetadata } from 'astro';
+import cocoDetail from '../assets/cats/coco.jpg';
+import cocoHome from '../assets/cats/coco-home.jpg';
+import zazaDetail from '../assets/cats/zaza.jpg';
+import zazaHome from '../assets/cats/zaza-home.jpg';
+
 export interface Cat {
   slug: string;
   name: string;
@@ -6,12 +12,14 @@ export interface Cat {
   color: string;
   short: string;
   body: string[];
-  image: { src: string; alt: string };
+  // Detailfoto (onze-poezen) en de compactere kaartfoto (homepage).
+  image: { src: ImageMetadata; alt: string };
+  homeImage: { src: ImageMetadata; alt: string };
+  // Officiële stamboom in de PawPeds-database. Zodra de link bekend is,
+  // verschijnt automatisch een "Bekijk stamboom"-knop bij de poes.
+  pedigreeUrl?: string;
   traits: string[];
 }
-
-// Stockfoto-IDs via Unsplash. Vervangen door eigen foto's zodra beschikbaar.
-const u = (id: string) => `https://images.unsplash.com/photo-${id}`;
 
 export const cats: Cat[] = [
   {
@@ -28,8 +36,12 @@ export const cats: Cat[] = [
       'Coco is via DNA getest en jaarlijks wordt ze via echo getest op HCM, PKD en CIN en ook op FIV en FeLV.',
     ],
     image: {
-      src: u('1592194996308-7b43878e84a6'),
-      alt: 'Ragdoll-poes met diepblauwe ogen, Coco',
+      src: cocoDetail,
+      alt: 'Coco, onze seal point Ragdoll, met diepblauwe ogen',
+    },
+    homeImage: {
+      src: cocoHome,
+      alt: 'Coco, seal point Ragdoll, rustend op de vensterbank',
     },
     traits: ['Speels', 'Sociaal', 'Nieuwsgierig'],
   },
@@ -47,8 +59,12 @@ export const cats: Cat[] = [
       'Zaza is via DNA getest en jaarlijks wordt ze via echo getest op HCM, PKD en CIN en ook op FIV en FeLV.',
     ],
     image: {
-      src: u('1574158622682-e40e69881006'),
-      alt: 'Ragdoll-poes met witte vacht en blauwe ogen, Zaza',
+      src: zazaDetail,
+      alt: 'Zaza, onze seal bicolour Ragdoll, met witte vacht en blauwe ogen',
+    },
+    homeImage: {
+      src: zazaHome,
+      alt: 'Zaza, seal bicolour Ragdoll, rustend op de vensterbank',
     },
     traits: ['Aanhankelijk', 'Rustig', 'Schoot-poes'],
   },

@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Placeholder from '../components/Placeholder.astro';
 import CatIcon from '../components/CatIcon.astro';
 import { ragdollIntro, ragdollFacts } from '../data/ragdoll';
+import cocoZazaSamen from '../assets/cats/coco-zaza-samen.jpg';
+import cocoZazaTuin from '../assets/cats/coco-zaza-tuin.jpg';
 ---
 
 <Layout
@@ -24,10 +26,10 @@ import { ragdollIntro, ragdollFacts } from '../data/ragdoll';
       </div>
       <div class="lg:col-span-5 reveal">
         <Placeholder
-          src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6"
-          alt="Ragdoll-poes met diepblauwe ogen, in een lichte kamer"
+          src={cocoZazaSamen}
+          alt="Coco en Zaza samen, onze twee Ragdolls"
           variant="mint"
-          ratio="4 / 5"
+          ratio="4 / 3"
           rounded="28px"
           class="shadow-card"
         />
@@ -66,8 +68,8 @@ import { ragdollIntro, ragdollFacts } from '../data/ragdoll';
     <div class="container-soft grid lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-5 reveal lg:order-2">
         <Placeholder
-          src="https://images.unsplash.com/photo-1543852786-1cf6624b9987"
-          alt="Ragdoll-kat wordt zachtjes geknuffeld"
+          src={cocoZazaTuin}
+          alt="Coco en Zaza samen buiten in de tuin, onder de bloesem"
           variant="blush"
           ratio="4 / 5"
           rounded="28px"

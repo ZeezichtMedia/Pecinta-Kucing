@@ -49,6 +49,18 @@ import { cats } from '../data/cats';
           <div class="flex flex-wrap gap-2 pt-2">
             {cat.traits.map((t) => <span class="chip"><CatIcon name="paw" size={12} /> {t}</span>)}
           </div>
+          {cat.pedigreeUrl && (
+            <a
+              href={cat.pedigreeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 pt-2 text-rose-deep hover:text-rose transition-colors text-sm font-medium"
+            >
+              <CatIcon name="sparkle" size={14} />
+              Bekijk de stamboom van {cat.name}
+              <CatIcon name="arrow" size={14} />
+            </a>
+          )}
         </div>
       </div>
     </section>

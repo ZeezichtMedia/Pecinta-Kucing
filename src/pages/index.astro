@@ -5,6 +5,8 @@ import CatIcon from '../components/CatIcon.astro';
 import { cats } from '../data/cats';
 import { site } from '../data/site';
 import { ragdollFacts } from '../data/ragdoll';
+import heroFoto from '../assets/cats/coco-zaza-tuin.jpg';
+import aboutFoto from '../assets/cats/zaza.jpg';
 
 const pillars = [
   { icon: 'home', title: 'Opgroeien in huis', text: 'Onze kittens groeien op tussen ons gezin, gewoon bij ons in huis.' },
@@ -14,13 +16,13 @@ const pillars = [
 ] as const;
 
 const heroPhoto = {
-  src: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6',
-  alt: 'Ragdoll-poes met blauwe ogen, rustend in een lichte kamer',
+  src: heroFoto,
+  alt: 'Coco en Zaza samen in de tuin, onze twee Ragdolls',
 };
 
 const aboutPhoto = {
-  src: 'https://images.unsplash.com/photo-1574158622682-e40e69881006',
-  alt: 'Ragdoll-kitten in de armen van zijn baasje',
+  src: aboutFoto,
+  alt: 'Zaza, onze Ragdoll, van dichtbij',
 };
 ---
 
@@ -161,8 +163,8 @@ const aboutPhoto = {
             class="reveal group bg-cream rounded-3xl overflow-hidden border border-line/60 hover:shadow-card transition-all flex flex-col"
           >
             <Placeholder
-              src={cat.image.src}
-              alt={cat.image.alt}
+              src={cat.homeImage.src}
+              alt={cat.homeImage.alt}
               variant="cream"
               ratio="4 / 3"
               rounded="0"

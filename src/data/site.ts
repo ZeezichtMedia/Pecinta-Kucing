@@ -18,6 +18,24 @@ export const site = {
   hours: 'Bezoek uitsluitend op afspraak',
 };
 
+// Keurmerken en aansluitingen. Vertrouwenssignalen voor kopers: aangesloten bij
+// de rasvereniging en officieel gecertificeerd als vakbekwaam houder.
+export const credentials = {
+  membership: {
+    name: 'Mundikat',
+    label: 'Aangesloten bij Mundikat',
+    description:
+      'Onze cattery is geregistreerd bij Mundikat, de Nederlandse rasvereniging voor stamboomkatten. Elk kitten gaat mee met een officiële, door Mundikat erkende stamboom.',
+    url: 'https://www.mundikat.nl',
+  },
+  certification: {
+    name: 'Vakbekwaam houder honden en katten',
+    label: 'Vakbekwaam gecertificeerd',
+    description:
+      'Rachèl behaalde het certificaat Vakbekwaamheid voor het houden van honden en katten, de wettelijke basis voor verantwoord, diervriendelijk en gezond fokken.',
+  },
+} as const;
+
 export const navItems = [
   { label: 'Home', href: '/' },
   { label: 'De cattery', href: '/de-cattery' },
