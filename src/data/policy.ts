@@ -10,7 +10,7 @@ export const policyPoints: PolicyPoint[] = [
   {
     title: 'Opgegroeid in huis',
     body:
-      'Onze kittens groeien op in onze woonkamer, tussen de kinderen en het normale gezinsleven. Geen aparte kamer of kennel, ze leren vanaf dag één wat een echt thuis is.',
+      'Onze kittens groeien op bij ons in huis, tussen de kinderen en het normale gezinsleven. Geen aparte kamer of kennel, ze leren vanaf dag één wat een echt thuis is.',
   },
   {
     title: 'Klaar voor hun nieuwe thuis vanaf 14 weken',
@@ -30,7 +30,7 @@ export const policyPoints: PolicyPoint[] = [
   {
     title: 'Wij blijven betrokken',
     body:
-      'Mocht het om welke reden dan ook niet werken, dan denken we mee en zoeken we samen een oplossing. Onze poezen blijven welkom.',
+      'Mocht het om welke reden dan ook niet werken in het nieuwe thuis, dan denken we mee en zoeken we samen een oplossing. Onze poezen blijven welkom.',
   },
   {
     title: 'Geen impulsaankoop',

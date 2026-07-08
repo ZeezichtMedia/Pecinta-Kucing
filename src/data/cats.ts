@@ -32,7 +32,6 @@ export const cats: Cat[] = [
     body: [
       'Coco kwam op 5 juni 2025 bij ons in huis. Vanaf het eerste moment voelde het alsof ze er altijd al was geweest.',
       'Waar Zaza rustig observeert, is Coco de eerste die op je af komt. Ze houdt van spelen, van mensen om zich heen en van een goede plek bij het raam.',
-      'Coco is de eerste van onze twee fok-poezen. Haar nestje verwachten we in het komende seizoen, meer informatie hierover delen we via de kittens-pagina.',
       'Coco is via DNA getest en jaarlijks wordt ze via echo getest op HCM, PKD en CIN en ook op FIV en FeLV.',
     ],
     image: {
@@ -54,8 +53,9 @@ export const cats: Cat[] = [
     short: 'Rustig, aanhankelijk en altijd op zoek naar aandacht.',
     body: [
       'Zaza is het zusje van Coco, geboren uit hetzelfde nestje en samen met haar bij ons komen wonen.',
-      'Ze is een zachte, bedachtzame poes die graag dicht bij ons is. Geen drukte, geen show, gewoon stil aanwezig en heerlijk om te knuffelen.',
+      'Ze is een zachte, bedachtzame poes die graag dicht bij ons is. Geen drukte, gewoon stil aanwezig en heerlijk om te knuffelen.',
       'Samen vullen ze elkaar perfect aan. Het zijn twee verschillende karakters in dezelfde lieve, aanhankelijke Ragdoll-stijl.',
+      'Zaza is een van onze twee fok-poezen. Haar eerste nestje verwachten we in het komende seizoen, meer informatie hierover delen we via de kittens-pagina.',
       'Zaza is via DNA getest en jaarlijks wordt ze via echo getest op HCM, PKD en CIN en ook op FIV en FeLV.',
     ],
     image: {
@@ -66,6 +66,6 @@ export const cats: Cat[] = [
       src: zazaHome,
       alt: 'Zaza, seal bicolour Ragdoll, rustend op de vensterbank',
     },
-    traits: ['Aanhankelijk', 'Rustig', 'Schoot-poes'],
+    traits: ['Aanhankelijk', 'Rustig', 'Altijd dichtbij'],
   },
 ];

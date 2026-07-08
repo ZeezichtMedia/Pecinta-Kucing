@@ -12,13 +12,6 @@ const channels = [
     description: 'Voor uitgebreide vragen of een eerste introductie van jezelf.',
   },
   {
-    icon: 'phone',
-    title: 'Telefoon',
-    value: site.phoneDisplay,
-    href: `tel:${site.phone.replace(/\s/g, '')}`,
-    description: 'Voor wie liever even direct kennismaakt.',
-  },
-  {
     icon: 'whatsapp',
     title: 'WhatsApp',
     value: site.phoneDisplay,
@@ -42,14 +35,14 @@ const channels = [
         Laten we <span class="italic text-rose-deep">kennismaken</span>.
       </h1>
       <p class="mt-6 text-lg">
-        Mail, app of bel, wat voor jou het prettigst is. We reageren altijd persoonlijk en nemen de tijd om je vragen door te nemen.
+        Mail of app, wat voor jou het prettigst is. We reageren altijd persoonlijk en nemen de tijd om je vragen door te nemen.
       </p>
     </div>
   </section>
 
   <!-- ── CHANNELS ───────────────────────────────────────── -->
   <section class="pb-20">
-    <div class="container-soft grid md:grid-cols-3 gap-5">
+    <div class="container-soft grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
       {channels.map((c) => (
         <a
           href={c.href}

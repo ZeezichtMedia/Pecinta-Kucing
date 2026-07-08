@@ -38,11 +38,11 @@ export const credentials = {
 
 export const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'De cattery', href: '/de-cattery' },
+  { label: 'De Cattery', href: '/de-cattery' },
   { label: 'Onze Ragdolls', href: '/onze-poezen' },
   { label: 'Kittens', href: '/kittens' },
   { label: 'De Ragdoll', href: '/de-ragdoll' },
   { label: 'Nieuws', href: '/nieuws' },
-  { label: 'Ons beleid', href: '/ons-beleid' },
+  { label: 'Ons Beleid', href: '/ons-beleid' },
   { label: 'Contact', href: '/contact' },
 ];
