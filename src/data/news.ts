@@ -1,5 +1,5 @@
 import type { ImageMetadata } from 'astro';
-import zazaKitten from '../assets/cats/zaza-kitten.jpg';
+import nestjeGeboren from '../assets/cats/nestje-geboren.jpg';
 
 export interface NewsItem {
   date: string;
@@ -47,8 +47,8 @@ export const news: NewsItem[] = [
       'Op 28 februari werden Coco en Zaza geboren. Vanaf dat moment telden we de dagen tot we ze op konden halen.',
     tag: 'Mijlpaal',
     image: {
-      src: zazaKitten,
-      alt: 'Zaza als pasgeboren Ragdoll-kitten',
+      src: nestjeGeboren,
+      alt: 'Het pasgeboren nestje Ragdoll-kittens, samen genesteld',
     },
   },
 ];

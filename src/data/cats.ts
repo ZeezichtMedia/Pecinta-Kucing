@@ -42,6 +42,7 @@ export const cats: Cat[] = [
       src: cocoHome,
       alt: 'Coco, seal point Ragdoll, rustend op de vensterbank',
     },
+    pedigreeUrl: 'https://www.pawpeds.com/db/?a=p&id=1868098&g=4&p=rag&o=elastic',
     traits: ['Speels', 'Sociaal', 'Nieuwsgierig'],
   },
   {
@@ -66,6 +67,7 @@ export const cats: Cat[] = [
       src: zazaHome,
       alt: 'Zaza, seal bicolour Ragdoll, rustend op de vensterbank',
     },
+    pedigreeUrl: 'https://www.pawpeds.com/db/?a=p&id=1868099&g=4&p=rag&o=elastic',
     traits: ['Aanhankelijk', 'Rustig', 'Altijd dichtbij'],
   },
 ];
