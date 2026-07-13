@@ -5,8 +5,8 @@ import CatIcon from '../components/CatIcon.astro';
 import { cats } from '../data/cats';
 import { site } from '../data/site';
 import { ragdollFacts } from '../data/ragdoll';
-import heroFoto from '../assets/cats/coco-zaza-tuin.jpg';
-import aboutFoto from '../assets/cats/zaza.jpg';
+import heroFoto from '../assets/cats/coco-zaza-kittens.jpg';
+import aboutFoto from '../assets/cats/coco-zaza-krabpaal.jpg';
 
 const pillars = [
   { icon: 'home', title: 'Opgroeien in huis', text: 'Onze kittens groeien op tussen ons gezin, gewoon bij ons in huis.' },
@@ -17,12 +17,12 @@ const pillars = [
 
 const heroPhoto = {
   src: heroFoto,
-  alt: 'Coco en Zaza samen in de tuin, onze twee Ragdolls',
+  alt: 'Coco en Zaza als kittens, samen op een zachte deken',
 };
 
 const aboutPhoto = {
   src: aboutFoto,
-  alt: 'Zaza, onze Ragdoll, van dichtbij',
+  alt: 'Coco en Zaza samen op de krabpaal',
 };
 ---
 
@@ -67,9 +67,9 @@ const aboutPhoto = {
           src={heroPhoto.src}
           alt={heroPhoto.alt}
           variant="mint"
-          ratio="4 / 5"
+          ratio="4 / 3"
           rounded="32px"
-          width={1100}
+          width={640}
           loading="eager"
           class="relative shadow-card"
         />

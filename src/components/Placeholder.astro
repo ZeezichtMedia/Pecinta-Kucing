@@ -38,6 +38,15 @@ const bg = {
 
 const isLocal = typeof src !== 'string';
 
+// Responsive breedtes voor lokale afbeeldingen, nooit groter dan het origineel
+// (anders faalt de build bij kleinere bronbestanden).
+const intrinsicW = isLocal ? (src as ImageMetadata).width : 0;
+const localWidths = isLocal
+  ? Array.from(new Set([400, 700, width, intrinsicW]))
+      .filter((w) => w <= intrinsicW)
+      .sort((a, b) => a - b)
+  : [];
+
 // Unsplash-fallback: bouw automatisch een geoptimaliseerde URL.
 const optimized =
   typeof src === 'string'
@@ -55,7 +64,7 @@ const optimized =
     <Image
       src={src as ImageMetadata}
       alt={alt}
-      widths={[400, 700, width]}
+      widths={localWidths}
       sizes={`(max-width: 640px) 100vw, ${width}px`}
       loading={loading}
       decoding="async"
