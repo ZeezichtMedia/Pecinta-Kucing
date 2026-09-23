@@ -14,16 +14,16 @@ export interface NewsItem {
 export const news: NewsItem[] = [
   {
     date: '2026-04-20',
-    title: 'Gezondheidsverklaringen Coco en Zaza ter goedkeuring',
+    title: 'Gezondheidsverklaringen Coco en Zaza',
     body:
-      'De gezondheidsverklaringen van Coco en Zaza zijn ter goedkeuring ingediend, zodat we straks verantwoord met ze kunnen fokken.',
+      'Coco en Zaza hebben allebei hun gezondheidsverklaring. Zo kan ik straks verantwoord met ze fokken.',
     tag: 'Gezondheid',
   },
   {
-    date: '2026-04-01',
-    title: 'Naam Cattery Pecinta Kucing goedgekeurd',
+    date: '2026-03-30',
+    title: 'Registratie bij Mundikat',
     body:
-      'De naam Cattery Pecinta Kucing is officieel goedgekeurd. Daarmee is onze cattery een feit en gaan we onder deze naam verder.',
+      'Cattery Pecinta Kucing is geregistreerd bij Mundikat, en daarmee staat ook de naam officieel vast. Vanaf nu is de cattery echt een feit.',
     tag: 'Mijlpaal',
   },
   {
@@ -48,7 +48,7 @@ export const news: NewsItem[] = [
     tag: 'Mijlpaal',
     image: {
       src: nestjeGeboren,
-      alt: 'Het pasgeboren nestje Ragdoll-kittens, samen genesteld',
+      alt: 'Het pasgeboren nestje Ragdoll-kittens met gekleurde bandjes, samen op een roze deken',
     },
   },
 ];

@@ -25,14 +25,14 @@ export const credentials = {
     name: 'Mundikat',
     label: 'Aangesloten bij Mundikat',
     description:
-      'Onze cattery is geregistreerd bij Mundikat, de Nederlandse rasvereniging voor stamboomkatten. Elk kitten gaat mee met een officiële, door Mundikat erkende stamboom.',
+      'Mijn cattery is geregistreerd bij Mundikat, de Nederlandse rasvereniging voor stamboomkatten. Ieder kitten gaat mee met een officieel erkende stamboom.',
     url: 'https://www.mundikat.nl',
   },
   certification: {
     name: 'Vakbekwaam houder honden en katten',
     label: 'Vakbekwaam gecertificeerd',
     description:
-      'Rachèl behaalde het certificaat Vakbekwaamheid voor het houden van honden en katten, de wettelijke basis voor verantwoord, diervriendelijk en gezond fokken.',
+      'Het certificaat Vakbekwaamheid voor het houden van honden en katten, de wettelijke basis voor verantwoord, diervriendelijk en gezond fokken, is in 2026 behaald.',
   },
 } as const;
 

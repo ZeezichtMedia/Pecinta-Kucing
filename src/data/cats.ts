@@ -40,7 +40,7 @@ export const cats: Cat[] = [
     },
     homeImage: {
       src: cocoHome,
-      alt: 'Coco, seal point Ragdoll, rustend op de vensterbank',
+      alt: 'Coco, seal point Ragdoll, buiten in de tuin',
     },
     pedigreeUrl: 'https://www.pawpeds.com/db/?a=p&id=1868098&g=4&p=rag&o=elastic',
     traits: ['Speels', 'Sociaal', 'Nieuwsgierig'],
@@ -56,7 +56,6 @@ export const cats: Cat[] = [
       'Zaza is het zusje van Coco, geboren uit hetzelfde nestje en samen met haar bij ons komen wonen.',
       'Ze is een zachte, bedachtzame poes die graag dicht bij ons is. Geen drukte, gewoon stil aanwezig en heerlijk om te knuffelen.',
       'Samen vullen ze elkaar perfect aan. Het zijn twee verschillende karakters in dezelfde lieve, aanhankelijke Ragdoll-stijl.',
-      'Zaza is een van onze twee fok-poezen. Haar eerste nestje verwachten we in het komende seizoen, meer informatie hierover delen we via de kittens-pagina.',
       'Zaza is via DNA getest en jaarlijks wordt ze via echo getest op HCM, PKD en CIN en ook op FIV en FeLV.',
     ],
     image: {

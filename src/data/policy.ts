@@ -4,7 +4,7 @@ export interface PolicyPoint {
 }
 
 export const policyIntro =
-  'Onze cattery is klein en persoonlijk. We fokken niet om het fokken, we fokken omdat we van het ras houden en omdat we onze kittens een goede start willen geven. Daarom werken we met een aantal heldere uitgangspunten.';
+  'Onze cattery is kleinschalig en persoonlijk. Ik fok niet om het fokken, ik fok omdat ik van het ras houd en omdat ik onze kittens een goede start wil geven. Daarom werk ik met een aantal heldere uitgangspunten.';
 
 export const policyPoints: PolicyPoint[] = [
   {
@@ -20,21 +20,21 @@ export const policyPoints: PolicyPoint[] = [
   {
     title: 'Met stamboom',
     body:
-      'Iedere kitten gaat met officiële stamboom mee. Dat is voor ons de basis voor verantwoord fokken en transparantie naar onze kopers.',
+      'Ieder kitten gaat met een officieel erkende stamboom mee. Dat is voor mij de basis voor verantwoord fokken en transparantie naar mijn kopers.',
   },
   {
     title: 'Een goed gevoel telt',
     body:
-      'We hebben graag een persoonlijk contactmoment met geïnteresseerden. Het moet voor beide kanten goed voelen, voor ons én voor de kitten die naar je toe komt.',
+      'Ik heb graag een persoonlijk contactmoment met geïnteresseerden. Het moet voor beide kanten goed voelen, voor mij én voor de kitten die naar je toe komt.',
   },
   {
-    title: 'Wij blijven betrokken',
+    title: 'Blijvende betrokkenheid',
     body:
-      'Mocht het om welke reden dan ook niet werken in het nieuwe thuis, dan denken we mee en zoeken we samen een oplossing. Onze poezen blijven welkom.',
+      'Mocht het om welke reden dan ook niet werken in het nieuwe thuis, dan denk ik mee en zoeken we samen een oplossing. Onze poezen blijven welkom.',
   },
   {
     title: 'Geen impulsaankoop',
     body:
-      'Een Ragdoll is een gezinslid voor 12 tot 15 jaar. We nemen graag de tijd om met je in gesprek te gaan voordat we tot een afspraak komen.',
+      'Een Ragdoll is een gezinslid voor 12 tot 15 jaar. Ik neem graag de tijd om met je in gesprek te gaan voordat we tot een afspraak komen.',
   },
 ];

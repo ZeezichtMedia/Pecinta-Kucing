@@ -43,7 +43,7 @@ export const ragdollFacts: RagdollFact[] = [
   {
     title: 'Een rustige aanwezigheid',
     body:
-      'Hoewel ze speels zijn, heeft de Ragdoll een rustig karakter. Ze zoeken gezelligheid en zijn graag bij je in de buurt, wat ze ideaal maakt als gezinsmaat.',
+      'Hoewel ze speels zijn, heeft de Ragdoll een rustig karakter. Ze zoeken gezelligheid en zijn graag bij je in de buurt, wat ze ideaal maakt als gezinsvriend.',
     icon: 'paw',
   },
 ];
