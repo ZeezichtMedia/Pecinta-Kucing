@@ -7,6 +7,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://ragdollgelderland.nl',
   integrations: [sitemap()],
+  redirects: {
+    '/ons-beleid': '/beleid',
+  },
   vite: {
     plugins: [tailwindcss()],
   },

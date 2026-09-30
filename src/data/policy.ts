@@ -20,7 +20,7 @@ export const policyPoints: PolicyPoint[] = [
   {
     title: 'Met stamboom',
     body:
-      'Ieder kitten gaat met een officieel erkende stamboom mee. Dat is voor mij de basis voor verantwoord fokken en transparantie naar mijn kopers.',
+      'Ieder kitten gaat met een erkende stamboom mee. Dat is voor mij de basis voor verantwoord fokken en transparantie naar mijn kopers.',
   },
   {
     title: 'Een goed gevoel telt',

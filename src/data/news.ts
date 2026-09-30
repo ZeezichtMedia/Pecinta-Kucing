@@ -13,6 +13,13 @@ export interface NewsItem {
 // collection of CMS, afhankelijk van wat Rachèl wil onderhouden.
 export const news: NewsItem[] = [
   {
+    date: '2026-09-18',
+    title: 'Het eerste nestje van Zaza',
+    body:
+      'Op 18 september is het eerste nestje van Zaza geboren. Een bijzonder moment voor mij en voor de cattery.',
+    tag: 'Nestje',
+  },
+  {
     date: '2026-04-20',
     title: 'Gezondheidsverklaringen Coco en Zaza',
     body:
@@ -35,9 +42,9 @@ export const news: NewsItem[] = [
   },
   {
     date: '2025-04-01',
-    title: 'Allergietest bij fokker Ilse, geslaagd',
+    title: 'Allergietest bij fokster Ilse, geslaagd',
     body:
-      'Voordat we de stap zetten, hebben we met het gezin mijn zoon laten testen op een allergische reactie. Dankzij de medewerking van fokker Ilse, en haar huis vol Ragdolls, kregen we groen licht.',
+      'Voordat we de stap zetten, heb ik met mijn kinderen mijn zoon laten testen op een allergische reactie. Dankzij de medewerking van fokster Ilse, en haar huis vol Ragdolls, kregen we groen licht.',
     tag: 'Verhaal',
   },
   {

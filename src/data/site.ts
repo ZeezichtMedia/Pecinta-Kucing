@@ -25,7 +25,7 @@ export const credentials = {
     name: 'Mundikat',
     label: 'Aangesloten bij Mundikat',
     description:
-      'Mijn cattery is geregistreerd bij Mundikat, de Nederlandse rasvereniging voor stamboomkatten. Ieder kitten gaat mee met een officieel erkende stamboom.',
+      'Mijn cattery is geregistreerd bij Mundikat, de Nederlandse rasvereniging voor stamboomkatten. Ieder kitten gaat mee met een erkende stamboom.',
     url: 'https://www.mundikat.nl',
   },
   certification: {
@@ -43,6 +43,6 @@ export const navItems = [
   { label: 'Kittens', href: '/kittens' },
   { label: 'De Ragdoll', href: '/de-ragdoll' },
   { label: 'Nieuws', href: '/nieuws' },
-  { label: 'Ons Beleid', href: '/ons-beleid' },
+  { label: 'Beleid', href: '/beleid' },
   { label: 'Contact', href: '/contact' },
 ];

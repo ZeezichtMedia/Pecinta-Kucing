@@ -5,7 +5,7 @@ export interface RagdollFact {
 }
 
 export const ragdollIntro = [
-  'De Ragdoll is een vrij jong kattenras, ontstaan in de jaren \'60 in Amerika, waar fokker Ann Baker het ras voor het eerst beschreef.',
+  'De Ragdoll is een vrij jong kattenras, ontstaan in de jaren \'60 in Amerika, waar fokster Ann Baker het ras voor het eerst beschreef.',
   'Het zijn grote, halflangharige katten met opvallend diepblauwe ogen en een zachte, zijdeachtige vacht. Hun naam, \'lappenpop\', danken ze aan hun ontspannen houding wanneer je ze oppakt.',
 ];
 
@@ -31,7 +31,7 @@ export const ragdollFacts: RagdollFact[] = [
   {
     title: 'Sociaal en kindvriendelijk',
     body:
-      'Ragdolls zijn sociaal, spraakzaam en uitgesproken kindvriendelijk. Ze passen goed in een huishouden waar veel rondom hen gebeurt.',
+      'Ragdolls zijn sociaal, spraakzaam en uitgesproken kindvriendelijk. Ze passen goed in een levendig huishouden waar veel gebeurt.',
     icon: 'home',
   },
   {
