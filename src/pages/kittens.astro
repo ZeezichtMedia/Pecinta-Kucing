@@ -3,6 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Placeholder from '../components/Placeholder.astro';
 import CatIcon from '../components/CatIcon.astro';
 import { site } from '../data/site';
+import { litters } from '../data/litters';
+
+const birthFormatter = new Intl.DateTimeFormat('nl-NL', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
 
 const includedItems = [
   { icon: 'sparkle', title: 'Officiële stamboom', text: 'Ieder kitten gaat met stamboom mee.' },
@@ -51,26 +58,65 @@ const stappen = [
         Klaar voor hun <span class="italic text-rose-deep">nieuwe thuis</span>.
       </h1>
       <p class="mt-6 text-lg">
-        Onze kittens groeien op bij ons in huis, tussen Mats, Tirza en alles wat een gewoon gezinsleven met zich meebrengt. Vanaf 14 weken mogen ze naar een lief nieuw thuis.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── STATUS ─────────────────────────────────────────── -->
-  <section class="pb-16">
-    <div class="container-soft">
-      <div class="reveal relative overflow-hidden rounded-[28px] bg-cream-warm border border-line/60 p-8 md:p-12">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div>
-            <span class="chip-rose chip"><CatIcon name="heart" size={14} /> Update</span>
-            <h2 class="mt-4 font-display text-2xl md:text-3xl">
-              Zaza heeft haar eerste nestje
-            </h2>
-            <p class="mt-2 max-w-xl">
-              Op dit moment heeft Zaza haar eerste nestje. Wil je op de hoogte blijven van de planning? Stuur mij gerust een berichtje, dan hou ik je persoonlijk op de hoogte.
-            </p>
+        Onze kittens groeien op bij ons in huis, tu  <!-- ── NESTJES ────────────────────────────────────────── -->
+  {litters.map((litter) => {
+    const [cover, ...more] = litter.photos;
+    return (
+      <section id={litter.slug} class="pb-16">
+        <div class="container-soft">
+          <div class="reveal relative overflow-hidden rounded-[28px] bg-cream-warm border border-line/60 p-6 md:p-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {cover && (
+              <div class="lg:col-span-5">
+                <Placeholder
+                  src={cover.src}
+                  alt={cover.alt}
+                  variant="blush"
+                  ratio="4 / 5"
+                  rounded="22px"
+                  width={640}
+                  loading="eager"
+                  class="shadow-card max-w-sm mx-auto lg:max-w-none"
+                />
+              </div>
+            )}
+            <div class:list={[cover ? 'lg:col-span-7' : 'lg:col-span-12']}>
+              <span class="chip-rose chip"><CatIcon name="heart" size={14} /> Nestje van {litter.mother}</span>
+              <h2 class="mt-4 font-display text-2xl md:text-3xl">{litter.title}</h2>
+              <p class="mt-2 text-sm text-ink-mute italic">
+                Geboren op <time datetime={litter.born}>{birthFormatter.format(new Date(litter.born))}</time>
+              </p>
+              <p class="mt-4 max-w-xl">{litter.intro}</p>
+              <p class="mt-3 max-w-xl">
+                Wil je op de hoogte blijven van de planning? Stuur mij gerust een berichtje, dan hou ik je persoonlijk op de hoogte.
+              </p>
+              <a href="/contact" class="btn-primary mt-7">
+                Houd me op de hoogte
+                <CatIcon name="arrow" size={14} />
+              </a>
+            </div>
           </div>
-          <a href="/contact" class="btn-primary self-start md:self-auto whitespace-nowrap">
+
+          {more.length > 0 && (
+            <div class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {more.map((photo) => (
+                <Placeholder
+                  src={photo.src}
+                  alt={photo.alt}
+                  variant="cream"
+                  ratio="1 / 1"
+                  rounded="18px"
+                  width={480}
+                  class="reveal"
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  })}
+
+ce-nowrap">
             Houd me op de hoogte
             <CatIcon name="arrow" size={14} />
           </a>
