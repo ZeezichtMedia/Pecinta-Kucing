@@ -1,5 +1,6 @@
 import type { ImageMetadata } from 'astro';
 import nestjeGeboren from '../assets/cats/nestje-geboren.jpg';
+import zazaNestjeNieuws from '../assets/cats/zaza-nestje-2026-nieuws.jpg';
 
 export interface NewsItem {
   date: string;
@@ -18,6 +19,10 @@ export const news: NewsItem[] = [
     body:
       'Op 18 september is het eerste nestje van Zaza geboren. Een bijzonder moment voor mij en voor de cattery.',
     tag: 'Nestje',
+    image: {
+      src: zazaNestjeNieuws,
+      alt: 'Zaza opgekruld op een groene deken met haar pasgeboren kittens tegen zich aan',
+    },
   },
   {
     date: '2026-04-20',
