@@ -39,7 +39,7 @@ const stappen = [
   {
     nr: '04',
     title: 'Mee naar huis vanaf 14 weken',
-    body: 'Op zijn vroegst rond 14 weken mag een kitten met je mee. Met Europees paspoort, eerste voer, een kittenpakket en wat tips voor de eerste dagen.',
+    body: 'Op zijn vroegst rond 14 weken mag een kitten met je mee. Met een erkende stamboom, Europees paspoort, eerste voer, een kittenpakket en wat tips voor de eerste dagen.',
   },
 ];
 ---
@@ -58,7 +58,12 @@ const stappen = [
         Klaar voor hun <span class="italic text-rose-deep">nieuwe thuis</span>.
       </h1>
       <p class="mt-6 text-lg">
-        Onze kittens groeien op bij ons in huis, tu  <!-- ── NESTJES ────────────────────────────────────────── -->
+        Onze kittens groeien op bij ons in huis, tussen Mats, Tirza en alles wat een gewoon gezinsleven met zich meebrengt. Vanaf 14 weken mogen ze naar een lief nieuw thuis.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── NESTJES ────────────────────────────────────────── -->
   {litters.map((litter) => {
     const [cover, ...more] = litter.photos;
     return (
@@ -115,15 +120,6 @@ const stappen = [
       </section>
     );
   })}
-
-ce-nowrap">
-            Houd me op de hoogte
-            <CatIcon name="arrow" size={14} />
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ── WAT KRIJG JE MEE ───────────────────────────────── -->
   <section class="py-20 bg-mint/40 paw-pattern">
