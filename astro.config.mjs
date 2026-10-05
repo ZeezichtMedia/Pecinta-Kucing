@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ragdollgelderland.nl',
+  site: 'https://www.ragdollgelderland.nl',
   integrations: [sitemap()],
   redirects: {
     '/ons-beleid': '/beleid',
