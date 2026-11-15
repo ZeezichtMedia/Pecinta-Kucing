@@ -102,16 +102,16 @@ const stappen = [
           </div>
 
           {more.length > 0 && (
-            <div class="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="mt-5 columns-2 md:columns-3 gap-4">
               {more.map((photo) => (
                 <Placeholder
                   src={photo.src}
                   alt={photo.alt}
                   variant="cream"
-                  ratio="1 / 1"
+                  ratio={`${photo.src.width} / ${photo.src.height}`}
                   rounded="18px"
-                  width={480}
-                  class="reveal"
+                  width={560}
+                  class="reveal mb-4 break-inside-avoid"
                 />
               ))}
             </div>
